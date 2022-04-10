@@ -7,11 +7,12 @@ public class Wizard extends Human{
 		offensive = 5;
 	}
 	
+	@Override
 	protected void attack(Living target) {
 		int damage = offensive * Rand.get(10);
 		target.hp = target.hp - damage;
 		
-		System.out.println(name + "が魔法で攻撃！" + target.name + "に" + damage + "のダメージを与えた。");
+		System.out.println(name + "が魔法で攻撃！"  + damage + "のダメージ！");
 	}
 
 }

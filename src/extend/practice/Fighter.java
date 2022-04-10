@@ -7,11 +7,12 @@ public class Fighter extends Human{
 		offensive = 30;
 	}
 	
+	@Override
 	protected void attack(Living target) {
 		int damage = offensive * Rand.get(10);
 		target.hp = target.hp - damage;
 		
-		System.out.println(name + "が斧で攻撃！" + target.name + "に" + damage + "のダメージを与えた。");
+		System.out.println(name + "が斧で攻撃！"  + damage + "のダメージ！");
 	}
 
 }
